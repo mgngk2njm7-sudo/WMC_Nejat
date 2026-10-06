@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background: #fafaf7;
+    color: #1c1c1e;
+    margin: 0;
+    padding: 2rem;
+}
+
+.main-title {
+    color: rgba(109, 40, 217, 1);
+}
+
+nav {
+    margin-bottom: 2rem;
+}
+
+nav a {
+    margin-right: 1rem;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border: 2px solid #6d28d9;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+footer {
+    margin-top: 2rem;
+}
