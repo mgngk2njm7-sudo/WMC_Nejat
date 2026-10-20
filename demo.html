@@ -21,11 +21,10 @@
 
     <main>
         <article class="card">
-            <h2>Hallo, ich bin Kay</h2>
+            <h2>Hallo, ich bin Kayhan Nejat</h2>
 
             <p>Ich bin Schüler an einer HTL und interessiere mich für Informatik.</p>
-            <p>In meiner Freizeit beschäftige ich mich gerne mit Sport und Technik.</p>
-            <p>Ich möchte meine Kenntnisse in HTML und Webentwicklung verbessern.</p>
+            
 
             <h3>Meine Interessen</h3>
 
@@ -36,7 +35,7 @@
                 <li>Technik</li>
             </ul>
 
-            <img src="bild.jpg" alt="Ein Bild von mir">
+            <img src="https://media.vienna.at/bezirke/bezirke-wien.png" alt="Bezirke von Wien">
         </article>
 
         <aside class="card">
@@ -48,6 +47,86 @@
     <footer>
         <p>© 2026 · Meine Seite</p>
     </footer>
+
+
+
+
+  <h1>Anmeldeformular</h1>
+
+  <!--
+    action:  mailto: öffnet den Mailclient. "?subject=" setzt den Betreff.
+             Leerzeichen im Betreff als %20 schreiben!
+    method:  post (laut Folie 4)
+    enctype: text/plain -> Daten kommen lesbar im Mailtext an
+  -->
+  <form action="mailto:ihre.email@mail.com?subject=Anmeldung%20Formular"
+        method="post" enctype="text/plain">
+
+    <!-- 1. Texteingabe (+ Bonus: required) -->
+    Vorname:
+    <input type="text" name="vorname" required>
+    <br><br>
+
+    Nachname:
+    <input type="text" name="nachname" required>
+    <br><br>
+
+    <!-- 2. Weiteres Eingabefeld: type="email" (prüft das @ automatisch) -->
+    E-Mail:
+    <input type="email" name="email" required>
+    <br><br>
+
+    <!-- Bonus: pattern-Matching -> genau 4 Ziffern (österreichische PLZ) -->
+    PLZ:
+    <input type="text" name="plz" pattern="[0-9]{4}"
+           title="Bitte genau 4 Ziffern eingeben" required>
+    <br><br>
+
+    <!-- 3. Radiobutton: gleicher name = nur eine Auswahl möglich -->
+    Geschlecht:
+    <input type="radio" name="geschlecht" value="maennlich">Männlich
+    <input type="radio" name="geschlecht" value="weiblich">Weiblich
+    <input type="radio" name="geschlecht" value="divers">Divers
+    <input type="radio" name="geschlecht" value="keineAngabe" checked>Keine Angabe
+    <br><br>
+
+    <!-- 4. Checkbox: mehrere Werte gleichzeitig möglich -->
+    Interessen:
+    <input type="checkbox" name="interesse" value="sport">Sport
+    <input type="checkbox" name="interesse" value="musik">Musik
+    <input type="checkbox" name="interesse" value="lesen">Lesen
+    <br><br>
+
+    <!-- 5. Dropdown (select mit option, selected = Vorauswahl) -->
+    Bundesland:
+    <select name="bundesland">
+      <option value="wien" selected>Wien</option>
+      <option value="noe">Niederösterreich</option>
+      <option value="ooe">Oberösterreich</option>
+      <option value="stmk">Steiermark</option>
+    </select>
+    <br><br>
+
+    <!-- 6. Mehrfachauswahl: select mit "multiple" (Strg/Cmd + Klick) -->
+    Programmiersprachen:<br>
+    <select name="sprachen" multiple>
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+      <option value="js">JavaScript</option>
+      <option value="python">Python</option>
+    </select>
+    <br><br>
+
+    <!-- 7. Mehrzeiliges Textfeld -->
+    Kommentar:<br>
+    <textarea name="kommentar" rows="5" cols="40"
+              placeholder="Fügen Sie Ihren Kommentar ein!"></textarea>
+    <br><br>
+
+    <!-- Buttons -->
+    <input type="submit" value="Formular abschicken">
+    <input type="reset" value="Formular zurücksetzen">
+  </form>
 
 </body>
 </html>
