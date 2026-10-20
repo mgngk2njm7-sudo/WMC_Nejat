@@ -1,0 +1,83 @@
+
+/* BOX-SIZING: Padding und Border zählen zur width dazu */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;            /* rem: relativ zur Root-Schriftgröße */
+  line-height: 1.5;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+/* Alles in einer Spalte, zentriert (margin: 0 auto) */
+header, main, footer {
+  width: 90%;                 /* %: relativ zum Parent */
+  max-width: 800px;           /* px: absolut */
+  margin: 0 auto;
+}
+
+header {
+  background-color: steelblue;
+  color: white;
+  padding: 1rem 2rem;         /* oben/unten 1rem, links/rechts 2rem */
+  margin-top: 1rem;
+}
+
+.ueberschrift {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Menü: inline-block, damit margin oben/unten funktioniert */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 10px 5px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid white;
+}
+
+nav li:hover {
+  background-color: #16416B;  /* nur mit Maus, nicht am Handy */
+}
+
+/* Inhalt */
+section {
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid silver;
+  box-shadow: 2px 3px 2px silver;
+}
+
+aside {
+  background-color: #e8f0f8;
+  padding: 10px;
+  margin-top: 1rem;
+}
+
+img {
+  width: 50%;                 /* halb so breit wie der Parent */
+  height: auto;               /* Proportionen bleiben */
+  display: block;
+  margin: 0 auto;             /* zentriert */
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
